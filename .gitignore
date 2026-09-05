@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# internal build docs — not for the public repo
+CLAUDE.md
+MASTER.md
