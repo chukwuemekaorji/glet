@@ -1,36 +1,36 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# The GLET Initiative — Website
 
-## Getting Started
+Marketing and lead-capture site for [The GLET Initiative](https://theglet.org), a pre-launch NGO in Nigeria equipping adolescent girls (10–18) with health literacy, leadership skills, and mentorship.
 
-First, run the development server:
+Read [`CLAUDE.md`](./CLAUDE.md) first for how this repo is built (stack, code style, folder structure), and [`MASTER.md`](./MASTER.md) for what it's built from (brand voice, page-by-page content, design system, imagery guide, API specs).
+
+## Stack
+
+Next.js 15 (App Router) · TypeScript (strict) · MUI v6 · Framer Motion · Zod · Resend
+
+## Getting started
 
 ```bash
+npm install
+cp .env.example .env.local   # fill in RESEND_API_KEY / CONTACT_TO_EMAIL to enable form emails
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Commands
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run dev      # local dev server
+npm run build    # production build (also runs the TypeScript check)
+npm run start    # run a production build locally
+npm run lint     # eslint
+```
 
-## Learn More
+## Pages
 
-To learn more about Next.js, take a look at the following resources:
+Five pages at launch: Home, About, Programme, Who We Serve, Get Involved — plus three form API routes (`/api/contact`, `/api/partner`, `/api/newsletter`) and auto-generated `/sitemap.xml` and `/robots.txt`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Still needed before full launch
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+See `MASTER.md` §10 — real contact email/social handles, a formal brand hex guide if one exists beyond what's in `lib/theme.ts`, a production domain, and real programme photography/impact numbers once GLET runs its first cohort.
