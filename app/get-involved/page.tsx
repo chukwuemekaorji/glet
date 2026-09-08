@@ -5,11 +5,15 @@ import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid2";
 import Typography from "@mui/material/Typography";
 import Stack from "@mui/material/Stack";
+import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import GetInvolvedPaths from "@/components/sections/GetInvolvedPaths";
 import PartnerForm from "@/components/forms/PartnerForm";
 import ContactForm from "@/components/forms/ContactForm";
 import AnimatedInView from "@/components/ui/AnimatedInView";
 import studyingPhoto from "@/public/images/get-involved/two-girls-studying-library.jpg";
+import { CONTACT_EMAIL, INSTAGRAM_HANDLE, INSTAGRAM_URL } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Get Involved",
@@ -21,11 +25,6 @@ export const metadata: Metadata = {
     description: "Partner with us. Support the movement. Become part of the change.",
   },
 };
-
-// Placeholders until the client supplies real values — see MASTER.md §10.
-const CONTACT_EMAIL = "hello@theglet.org";
-const INSTAGRAM_HANDLE = "@theGLETinitiative";
-const LINKEDIN_HANDLE = "The GLET Initiative";
 
 export default function GetInvolvedPage() {
   return (
@@ -114,18 +113,50 @@ export default function GetInvolvedPage() {
 
       <Box component="section" sx={{ py: { xs: 6, md: 8 }, bgcolor: "background.paper" }}>
         <Container maxWidth="md">
-          <Stack spacing={1} sx={{ textAlign: "center" }}>
+          <Stack spacing={2} alignItems="center">
             <Typography component="h2" variant="h4">
               Or reach us directly
             </Typography>
-            <Typography variant="body1" color="text.secondary">
-              <Box component="a" href={`mailto:${CONTACT_EMAIL}`} sx={{ color: "primary.dark", fontWeight: 700 }}>
-                {CONTACT_EMAIL}
-              </Box>
-            </Typography>
-            <Typography variant="body2" color="text.secondary">
-              Instagram: {INSTAGRAM_HANDLE} &middot; LinkedIn: {LINKEDIN_HANDLE} &middot; Location: Nigeria
-            </Typography>
+            <Stack
+              direction={{ xs: "column", sm: "row" }}
+              spacing={{ xs: 1.5, sm: 4 }}
+              alignItems="center"
+            >
+              <Stack
+                component="a"
+                href={`mailto:${CONTACT_EMAIL}`}
+                direction="row"
+                alignItems="center"
+                spacing={1}
+                sx={{ color: "primary.dark", textDecoration: "none", fontWeight: 700 }}
+              >
+                <EmailOutlinedIcon sx={{ fontSize: 20 }} />
+                <Typography component="span" sx={{ fontWeight: 700, color: "inherit" }}>
+                  {CONTACT_EMAIL}
+                </Typography>
+              </Stack>
+              <Stack
+                component="a"
+                href={INSTAGRAM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                direction="row"
+                alignItems="center"
+                spacing={1}
+                sx={{ color: "primary.dark", textDecoration: "none", fontWeight: 700 }}
+              >
+                <InstagramIcon sx={{ fontSize: 20 }} />
+                <Typography component="span" sx={{ fontWeight: 700, color: "inherit" }}>
+                  {INSTAGRAM_HANDLE}
+                </Typography>
+              </Stack>
+              <Stack direction="row" alignItems="center" spacing={1} sx={{ color: "text.secondary" }}>
+                <LocationOnOutlinedIcon sx={{ fontSize: 20 }} />
+                <Typography component="span" color="text.secondary">
+                  Nigeria
+                </Typography>
+              </Stack>
+            </Stack>
           </Stack>
         </Container>
       </Box>

@@ -12,6 +12,7 @@ results, etc.).
 | `home/hero-bw-classmates.jpg` | Supplied directly by the client (GLET) | Owned by GLET | Candid black-and-white group photo of schoolgirls with a coursebook. Used as the Home hero background. |
 | `home/illustration-grow-dream-believe.jpg` | Supplied directly by the client (GLET) | Unconfirmed — appears to be an AI-generated/illustrated image, not a photo of real children | Used as a companion visual next to the "GLET Heartbeat" manifesto on Home. |
 | `about/outreach-group-session.jpg` | Supplied directly by the client (GLET) | Owned by GLET | Real outreach/classroom photo. Captioned generically as a community outreach session — not claimed to depict the founder specifically, since individual identities in the photo aren't confirmed. |
+| `about/founder-nkechi.jpg` | Supplied directly by the client (GLET) | Owned by GLET | Professional headshot of Nkechi Patience Igwebuike, Founder. Used on the About page. |
 | `about/illustration-her-story-our-future.jpg` | Supplied directly by the client (GLET) | Unconfirmed — appears to be an AI-generated/illustrated image | Used alongside the Mission/Vision section on About. |
 | `who-we-serve/portrait-smiling-girl.jpg` | Supplied directly by the client (GLET) | Owned by GLET | Real photo, used as the top visual on Who We Serve. |
 | `who-we-serve/two-girls-reading-outdoors.jpg` | Supplied directly by the client (GLET) | Owned by GLET | Real photo, used near the GLET Girl traits section. |

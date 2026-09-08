@@ -4,8 +4,12 @@ import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid2";
 import Typography from "@mui/material/Typography";
 import Stack from "@mui/material/Stack";
+import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import Logo from "@/components/ui/Logo";
 import NewsletterForm from "@/components/forms/NewsletterForm";
+import { CONTACT_EMAIL, INSTAGRAM_HANDLE, INSTAGRAM_URL } from "@/lib/content";
 
 const NAV_LINKS = [
   { href: "/about", label: "About" },
@@ -13,12 +17,6 @@ const NAV_LINKS = [
   { href: "/who-we-serve", label: "Who We Serve" },
   { href: "/get-involved", label: "Get Involved" },
 ];
-
-// Social/contact values are placeholders until the client supplies real
-// handles — see MASTER.md §10. Left visible-but-honest rather than hidden,
-// since "Location: Nigeria" is already confirmed.
-const CONTACT_EMAIL = "gletinitiative@gmail.com";
-const INSTAGRAM_HANDLE = "@thegletinitiative";
 
 export default function Footer() {
   return (
@@ -70,20 +68,41 @@ export default function Footer() {
             >
               Connect
             </Typography>
-            <Stack spacing={1}>
-              <Box
+            <Stack spacing={1.25}>
+              <Stack
                 component="a"
                 href={`mailto:${CONTACT_EMAIL}`}
+                direction="row"
+                alignItems="center"
+                spacing={1}
                 sx={{ color: "grey.300", textDecoration: "none", "&:hover": { color: "primary.main" } }}
               >
-                {CONTACT_EMAIL}
-              </Box>
-              <Typography variant="body2" sx={{ color: "grey.300" }}>
-                {INSTAGRAM_HANDLE}
-              </Typography>
-              <Typography variant="body2" sx={{ color: "grey.500" }}>
-                Nigeria
-              </Typography>
+                <EmailOutlinedIcon sx={{ fontSize: 18 }} />
+                <Typography variant="body2" component="span" sx={{ color: "inherit" }}>
+                  {CONTACT_EMAIL}
+                </Typography>
+              </Stack>
+              <Stack
+                component="a"
+                href={INSTAGRAM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                direction="row"
+                alignItems="center"
+                spacing={1}
+                sx={{ color: "grey.300", textDecoration: "none", "&:hover": { color: "primary.main" } }}
+              >
+                <InstagramIcon sx={{ fontSize: 18 }} />
+                <Typography variant="body2" component="span" sx={{ color: "inherit" }}>
+                  {INSTAGRAM_HANDLE}
+                </Typography>
+              </Stack>
+              <Stack direction="row" alignItems="center" spacing={1} sx={{ color: "grey.500" }}>
+                <LocationOnOutlinedIcon sx={{ fontSize: 18 }} />
+                <Typography variant="body2" component="span" sx={{ color: "inherit" }}>
+                  Nigeria
+                </Typography>
+              </Stack>
             </Stack>
 
             <Box sx={{ mt: 3 }}>

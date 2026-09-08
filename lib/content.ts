@@ -8,6 +8,14 @@ import VolunteerActivismIcon from "@mui/icons-material/VolunteerActivism";
 import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome";
 import type { SvgIconComponent } from "@mui/icons-material";
 
+// Real contact details, confirmed by the client — used by both the Footer
+// and the Get Involved page so there's exactly one place to update them.
+// LinkedIn is left out until a real handle is confirmed (never show a
+// fabricated one).
+export const CONTACT_EMAIL = "gletinitiative@gmail.com";
+export const INSTAGRAM_HANDLE = "@thegletinitiative";
+export const INSTAGRAM_URL = `https://instagram.com/${INSTAGRAM_HANDLE.replace(/^@/, "")}`;
+
 export interface FrameworkPillar {
   letter: "G" | "L" | "E" | "T";
   title: string;
