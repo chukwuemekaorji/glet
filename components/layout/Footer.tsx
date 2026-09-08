@@ -8,7 +8,6 @@ import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import Logo from "@/components/ui/Logo";
-import NewsletterForm from "@/components/forms/NewsletterForm";
 import { CONTACT_EMAIL, INSTAGRAM_HANDLE, INSTAGRAM_URL } from "@/lib/content";
 
 const NAV_LINKS = [
@@ -104,13 +103,6 @@ export default function Footer() {
                 </Typography>
               </Stack>
             </Stack>
-
-            <Box sx={{ mt: 3 }}>
-              <Typography variant="overline" sx={{ color: "grey.500", display: "block", mb: 1 }}>
-                Stay Updated
-              </Typography>
-              <NewsletterForm tone="light" />
-            </Box>
           </Grid>
         </Grid>
 

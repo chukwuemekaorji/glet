@@ -36,20 +36,3 @@ export async function sendEmail({ subject, html, replyTo }: SendEmailParams): Pr
     ...(replyTo ? { replyTo } : {}),
   });
 }
-
-// Stub for whichever mailing list provider GLET ends up choosing
-// (Mailchimp, ConvertKit, Buttondown, etc.). Wire this up once a provider
-// and API key are picked — don't block launch on this decision.
-export async function subscribeToNewsletter(email: string): Promise<void> {
-  const apiKey = process.env.NEWSLETTER_PROVIDER_API_KEY;
-
-  if (!apiKey) {
-    console.warn(
-      "[newsletter] NEWSLETTER_PROVIDER_API_KEY not set — subscription not sent.",
-      { email }
-    );
-    return;
-  }
-
-  // TODO: call the chosen provider's API here once selected.
-}

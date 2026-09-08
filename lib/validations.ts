@@ -40,9 +40,3 @@ export const partnerSchema = z.object({
 });
 
 export type PartnerInput = z.infer<typeof partnerSchema>;
-
-export const newsletterSchema = z.object({
-  email: z.string().trim().email("Please enter a valid email address."),
-});
-
-export type NewsletterInput = z.infer<typeof newsletterSchema>;
