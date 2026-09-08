@@ -17,8 +17,8 @@ const NAV_LINKS = [
 // Social/contact values are placeholders until the client supplies real
 // handles — see MASTER.md §10. Left visible-but-honest rather than hidden,
 // since "Location: Nigeria" is already confirmed.
-const CONTACT_EMAIL = "hello@theglet.org"; // placeholder — replace with real inbox
-const INSTAGRAM_HANDLE = "@theGLETinitiative"; // placeholder
+const CONTACT_EMAIL = "gletinitiative@gmail.com";
+const INSTAGRAM_HANDLE = "@thegletinitiative";
 
 export default function Footer() {
   return (
