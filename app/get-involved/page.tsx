@@ -2,15 +2,13 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
-import Grid from "@mui/material/Grid2";
 import Typography from "@mui/material/Typography";
 import Stack from "@mui/material/Stack";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import GetInvolvedPaths from "@/components/sections/GetInvolvedPaths";
-import PartnerForm from "@/components/forms/PartnerForm";
-import ContactForm from "@/components/forms/ContactForm";
+import PrimaryButton from "@/components/ui/PrimaryButton";
 import AnimatedInView from "@/components/ui/AnimatedInView";
 import studyingPhoto from "@/public/images/get-involved/two-girls-studying-library.jpg";
 import { CONTACT_EMAIL, INSTAGRAM_HANDLE, INSTAGRAM_URL } from "@/lib/content";
@@ -85,56 +83,36 @@ export default function GetInvolvedPage() {
         </Container>
       </Box>
 
-      <Box component="section" id="contact" sx={{ py: { xs: 6, md: 10 } }}>
-        <Container maxWidth="lg">
-          <Grid container spacing={{ xs: 6, md: 8 }}>
-            <Grid size={{ xs: 12, md: 6 }}>
-              <Typography component="h2" variant="h3" sx={{ mb: 1 }}>
-                Partnership Inquiry
-              </Typography>
-              <Typography variant="body2" color="text.secondary" sx={{ mb: 3 }}>
-                For organisations, funders, schools and healthcare partners.
-              </Typography>
-              <PartnerForm />
-            </Grid>
-
-            <Grid size={{ xs: 12, md: 6 }}>
-              <Typography component="h2" variant="h3" sx={{ mb: 1 }}>
-                General Inquiry
-              </Typography>
-              <Typography variant="body2" color="text.secondary" sx={{ mb: 3 }}>
-                Volunteers, parents, and anyone else with a question.
-              </Typography>
-              <ContactForm />
-            </Grid>
-          </Grid>
-        </Container>
-      </Box>
-
-      <Box component="section" sx={{ py: { xs: 6, md: 8 }, bgcolor: "background.paper" }}>
+      <Box component="section" id="contact" sx={{ py: { xs: 8, md: 12 }, bgcolor: "background.paper" }}>
         <Container maxWidth="md">
-          <Stack spacing={2} alignItems="center">
-            <Typography component="h2" variant="h4">
-              Or reach us directly
+          <Stack spacing={3} alignItems="center" textAlign="center">
+            <Typography component="h2" variant="h3">
+              Get in touch
             </Typography>
+            <Typography variant="body1" color="text.secondary" sx={{ maxWidth: "48ch" }}>
+              Whether you&apos;re an organisation looking to partner, someone
+              who wants to volunteer, or just have a question — reach out
+              directly and we&apos;ll get back to you.
+            </Typography>
+
+            <PrimaryButton
+              component="a"
+              href={`mailto:${CONTACT_EMAIL}`}
+              variant="contained"
+              color="primary"
+              size="large"
+              startIcon={<EmailOutlinedIcon />}
+              sx={{ mt: 1 }}
+            >
+              {CONTACT_EMAIL}
+            </PrimaryButton>
+
             <Stack
               direction={{ xs: "column", sm: "row" }}
               spacing={{ xs: 1.5, sm: 4 }}
               alignItems="center"
+              sx={{ pt: 2 }}
             >
-              <Stack
-                component="a"
-                href={`mailto:${CONTACT_EMAIL}`}
-                direction="row"
-                alignItems="center"
-                spacing={1}
-                sx={{ color: "primary.dark", textDecoration: "none", fontWeight: 700 }}
-              >
-                <EmailOutlinedIcon sx={{ fontSize: 20 }} />
-                <Typography component="span" sx={{ fontWeight: 700, color: "inherit" }}>
-                  {CONTACT_EMAIL}
-                </Typography>
-              </Stack>
               <Stack
                 component="a"
                 href={INSTAGRAM_URL}

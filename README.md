@@ -6,13 +6,13 @@ Read [`CLAUDE.md`](./CLAUDE.md) first for how this repo is built (stack, code st
 
 ## Stack
 
-Next.js 15 (App Router) · TypeScript (strict) · MUI v6 · Framer Motion · Zod · Resend
+Next.js 15 (App Router) · TypeScript (strict) · MUI v6 · Framer Motion
 
 ## Getting started
 
 ```bash
 npm install
-cp .env.example .env.local   # fill in RESEND_API_KEY / CONTACT_TO_EMAIL to enable form emails
+cp .env.example .env.local
 npm run dev
 ```
 
@@ -29,7 +29,7 @@ npm run lint     # eslint
 
 ## Pages
 
-Five pages at launch: Home, About, Programme, Who We Serve, Get Involved — plus three form API routes (`/api/contact`, `/api/partner`, `/api/newsletter`) and auto-generated `/sitemap.xml` and `/robots.txt`.
+Five pages at launch: Home, About, Programme, Who We Serve, Get Involved — plus auto-generated `/sitemap.xml` and `/robots.txt`. No forms or backend routes — Get Involved links out to a `mailto:` and Instagram directly.
 
 ## Still needed before full launch
 

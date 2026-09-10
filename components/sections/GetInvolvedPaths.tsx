@@ -22,13 +22,13 @@ const PATHS: Path[] = [
     icon: HandshakeIcon,
     title: "Partner",
     description:
-      "Organisations, funders, schools and healthcare partners who can contribute expertise, resources or reach — fill in the partnership form below.",
+      "Organisations, funders, schools and healthcare partners who can contribute expertise, resources or reach — email us directly below.",
   },
   {
     icon: VolunteerActivismIcon,
     title: "Volunteer",
     description:
-      "Individuals who want to support programme delivery, facilitation, mentorship or logistics — reach out through the general contact form below.",
+      "Individuals who want to support programme delivery, facilitation, mentorship or logistics — email us directly below.",
   },
   {
     icon: InstagramIcon,
