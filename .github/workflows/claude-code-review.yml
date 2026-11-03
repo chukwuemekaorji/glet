@@ -12,11 +12,9 @@ on:
 
 jobs:
   claude-review:
-    # Optional: Filter by PR author
-    # if: |
-    #   github.event.pull_request.user.login == 'external-contributor' ||
-    #   github.event.pull_request.user.login == 'new-developer' ||
-    #   github.event.pull_request.author_association == 'FIRST_TIME_CONTRIBUTOR'
+    # Repo is public — only auto-review PRs opened by people we trust, so a
+    # random external PR doesn't silently burn our Pro subscription's usage.
+    if: contains(fromJSON('["chukwuemekaorji", "igwebuikenkechi6-coder"]'), github.actor)
 
     runs-on: ubuntu-latest
     permissions:
